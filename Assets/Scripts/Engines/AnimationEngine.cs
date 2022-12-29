@@ -4,7 +4,7 @@ using NaughtyAttributes;
 [RequireComponent(typeof(Animator))]
 public sealed class AnimationEngine : MonoBehaviour
 {
-    [SerializeField] private Animator m_Animator = null;
+    [SerializeField] private Animator m_Animator;
     [SerializeField, AnimatorParam(nameof(m_Animator))] private string m_ParameterName;
 
     public void PlayAnimation(Vector2 movementInput)

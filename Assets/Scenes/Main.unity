@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 450937792}
   - component: {fileID: 450937791}
   - component: {fileID: 450937793}
-  - component: {fileID: 450937797}
+  - component: {fileID: 450937799}
   - component: {fileID: 450937796}
   - component: {fileID: 450937798}
   - component: {fileID: 450937795}
@@ -518,19 +518,6 @@ MonoBehaviour:
   m_MaxSpeed: 4.5
   m_Acceleration: 3
   m_Deacceleration: 4
---- !u!114 &450937797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450937790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be1f4a22d116ba459b53bd178734b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Camera: {fileID: 519420031}
 --- !u!114 &450937798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +540,64 @@ MonoBehaviour:
   m_InteractionHeader: {fileID: 1325381090}
   m_ProgressBar: {fileID: 1586733821}
   m_ProgressBarGO: {fileID: 1586733819}
+--- !u!114 &450937799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450937790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb37f42310d2964880c792475e82ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 519420031}
+  OnMovementInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 450937796}
+        m_TargetAssemblyTypeName: MovementEngine, Assembly-CSharp
+        m_MethodName: set_MovementInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 450937795}
+        m_TargetAssemblyTypeName: AnimationEngine, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPointerInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 450937795}
+        m_TargetAssemblyTypeName: AnimationEngine, Assembly-CSharp
+        m_MethodName: RotateToPointer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &471496310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,9 +1511,9 @@ MonoBehaviour:
   m_OnSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 450937797}
-        m_TargetAssemblyTypeName: Cat, Assembly-CSharp
-        m_MethodName: set_IsMoving
+      - m_Target: {fileID: 450937799}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1481,9 +1526,9 @@ MonoBehaviour:
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 450937797}
-        m_TargetAssemblyTypeName: Cat, Assembly-CSharp
-        m_MethodName: set_IsMoving
+      - m_Target: {fileID: 450937799}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48530,6 +48575,15 @@ MonoBehaviour:
   m_MathOperationType: 0
   m_MathematicalExpressionsCount: 3
   m_MinMaxNumber: {x: 1, y: 10}
+  OnCorrectAnswer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWrongAnswer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAllQuestionsCorrectAnswer:
+    m_PersistentCalls:
+      m_Calls: []
   m_MathematicalExpressionText: {fileID: 650150133}
   m_MathematicalExpressionNumberText: {fileID: 478555115}
   m_AnswerInputField: {fileID: 783059786}

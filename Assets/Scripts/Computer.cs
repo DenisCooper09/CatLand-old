@@ -1,23 +1,12 @@
-using NaughtyAttributes;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using TMPro;
+using NaughtyAttributes;
 using Random = UnityEngine.Random;
 
-public class Computer : MonoBehaviour
+public sealed class Computer : BinaryMathematics
 {
-    public static event Action OnCorrectAnswer, OnWrongAnswer, OnAllQuestionsCorrectAnswer;
-
-    private enum MathOperationType
-    {
-        Addition,
-        Subtraction,
-        Multiplication,
-        Division
-    }
-
     [SerializeField] private bool m_UseRandom = false;
 
     private const string MathematicalExpressionHeader = "Mathematical Expressions Settings";
@@ -27,6 +16,10 @@ public class Computer : MonoBehaviour
 
     [SerializeField, BoxGroup(MathematicalExpressionHeader), Range(3, 15)] private int m_MathematicalExpressionsCount = 3;
     [SerializeField, BoxGroup(MathematicalExpressionHeader), MinMaxSlider(0, 100)] private Vector2Int m_MinMaxNumber;
+
+    private const string UnityEvents = "Unity Events";
+
+    [SerializeField, Foldout(UnityEvents)] private UnityEvent OnCorrectAnswer, OnWrongAnswer, OnAllQuestionsCorrectAnswer;
 
     private const string UI = nameof(UI);
 
@@ -38,7 +31,7 @@ public class Computer : MonoBehaviour
 
     [Header(Caret)]
     [SerializeField, Foldout(UI)] private float m_CaretBlinkRate = 3f;
-    [SerializeField, Foldout(UI)] private int m_CaretWidth = 25;
+    [SerializeField, Foldout(UI)] private int m_CaretWidth = 3;
 
     private int _currentMathematicalExpressionNumber;
     private MathematicalExpression[] _mathematicalExpressions;
@@ -55,41 +48,44 @@ public class Computer : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            HandleInput();
+    }
+
+    private void HandleInput()
+    {
+        if (m_AnswerInputField.text == "/restart")
         {
-            if (m_AnswerInputField.text == "/restart")
+            m_MathematicalExpressionText.color = Color.green;
+            m_AnswerInputField.text = string.Empty;
+            _mathematicalExpressions = MakeMathematicalExpressions();
+            UpdateMathematicalExpressionUI();
+            return;
+        }
+
+        if (m_AnswerInputField.text == _mathematicalExpressions[_currentMathematicalExpressionNumber].Answer)
+        {
+            OnCorrectAnswer?.Invoke();
+
+            if (_currentMathematicalExpressionNumber + 1 == m_MathematicalExpressionsCount)
             {
-                m_MathematicalExpressionText.color = Color.green;
+                OnAllQuestionsCorrectAnswer?.Invoke();
+                _currentMathematicalExpressionNumber = 0;
+                PrintMessage("Correct!", Color.green);
                 m_AnswerInputField.text = string.Empty;
-                _mathematicalExpressions = MakeMathematicalExpressions();
-                UpdateMathematicalExpressionUI();
+                _correct = true;
                 return;
             }
 
-            if (m_AnswerInputField.text == _mathematicalExpressions[_currentMathematicalExpressionNumber].Answer)
-            {
-                OnCorrectAnswer?.Invoke();
-
-                if (_currentMathematicalExpressionNumber + 1 == m_MathematicalExpressionsCount)
-                {
-                    OnAllQuestionsCorrectAnswer?.Invoke();
-                    _currentMathematicalExpressionNumber = 0;
-                    PrintMessage("Correct!", Color.green);
-                    m_AnswerInputField.text = string.Empty;
-                    _correct = true;
-                    return;
-                }
-
-                _currentMathematicalExpressionNumber++;
-                m_AnswerInputField.text = string.Empty;
-                UpdateMathematicalExpressionUI();
-            }
-            else if (m_AnswerInputField.text != _mathematicalExpressions[_currentMathematicalExpressionNumber].Answer)
-            {
-                OnWrongAnswer?.Invoke();
-                _currentMathematicalExpressionNumber = 0;
-                PrintMessage("Wrong!", Color.red);
-                m_AnswerInputField.text = string.Empty;
-            }
+            _currentMathematicalExpressionNumber++;
+            m_AnswerInputField.text = string.Empty;
+            UpdateMathematicalExpressionUI();
+        }
+        else if (m_AnswerInputField.text != _mathematicalExpressions[_currentMathematicalExpressionNumber].Answer)
+        {
+            OnWrongAnswer?.Invoke();
+            _currentMathematicalExpressionNumber = 0;
+            PrintMessage("Wrong!", Color.red);
+            m_AnswerInputField.text = string.Empty;
         }
     }
 
@@ -149,64 +145,13 @@ public class Computer : MonoBehaviour
         return (MathOperationType)values.GetValue(Random.Range(0, values.Length));
     }
 
-    private sealed class MathematicalExpression
-    {
-        public MathematicalExpression(int number1, int number2, MathOperationType mathOperationType)
-        {
-            Number1 = ConvertToBinary(number1);
-            Number2 = ConvertToBinary(number2);
-
-            Answer = mathOperationType switch
-            {
-                MathOperationType.Addition => ConvertToBinary(number1 + number2),
-                MathOperationType.Subtraction => ConvertToBinary(number1 - number2),
-                MathOperationType.Multiplication => ConvertToBinary(number1 * number2),
-                MathOperationType.Division => ConvertToBinary(number1 / number2),
-                _ => throw new Exception("Unsupported type of math operation."),
-            };
-
-            MathOperationType = mathOperationType;
-        }
-
-        public string Number1 { get; private set; }
-        public string Number2 { get; private set; }
-        public string Answer { get; private set; }
-        public MathOperationType MathOperationType { get; private set; }
-    }
-
-    private static string ConvertToBinary(int number)
-    {
-        const int mask = 1;
-        string binary = default;
-
-        while (number > 0)
-        {
-            binary = (number & mask) + binary;
-            number >>= 1;
-        }
-
-        return binary;
-    }
-
     private void UpdateMathematicalExpressionUI()
     {
         m_MathematicalExpressionNumberText.text =
             $"{_currentMathematicalExpressionNumber + 1} of {m_MathematicalExpressionsCount}";
         m_MathematicalExpressionText.text =
             $"{_mathematicalExpressions[_currentMathematicalExpressionNumber].Number1} " +
-            $"{GetOperationSymbol()} " +
+            $"{_mathematicalExpressions[_currentMathematicalExpressionNumber].OperationSymbol} " +
             $"{_mathematicalExpressions[_currentMathematicalExpressionNumber].Number2} = ?";
-    }
-
-    private string GetOperationSymbol()
-    {
-        return _mathematicalExpressions[_currentMathematicalExpressionNumber].MathOperationType switch
-        {
-            MathOperationType.Addition => "+",
-            MathOperationType.Subtraction => "-",
-            MathOperationType.Multiplication => "*",
-            MathOperationType.Division => "/",
-            _ => throw new Exception("Unsupported type of math operation."),
-        };
     }
 }

@@ -1,14 +1,20 @@
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using NaughtyAttributes;
 
-public class CatInput : MonoBehaviour
+public sealed class CatInput : MonoBehaviour
 {
-    public static event Action OnDropButtonPressed;
+    [SerializeField] private Camera m_Camera;
+
+    private const string UnityEvents = "Unity Events";
+
+    [SerializeField, Foldout(UnityEvents)] private UnityEvent<Vector2> OnMovementInput, OnPointerInput;
+    [SerializeField, Foldout(UnityEvents)] private UnityEvent OnDrop;
 
     private CatInputActions _catInputActions;
 
-    protected virtual void Awake()
+    private void Awake()
     {
         _catInputActions = new CatInputActions();
         _catInputActions.Cat.Enable();
@@ -18,16 +24,12 @@ public class CatInput : MonoBehaviour
     private void PerformDrop(InputAction.CallbackContext context)
     {
         if (context.performed)
-            OnDropButtonPressed?.Invoke();
+            OnDrop?.Invoke();
     }
 
-    protected Vector2 GetMovementInput()
+    private void Update()
     {
-        return _catInputActions.Cat.Movement.ReadValue<Vector2>();
-    }
-
-    protected Vector2 GetPointerPosition(Camera camera)
-    {
-        return (Vector2)camera.ScreenToWorldPoint(_catInputActions.Cat.PointerPosition.ReadValue<Vector2>());
+        OnMovementInput?.Invoke(_catInputActions.Cat.Movement.ReadValue<Vector2>());
+        OnPointerInput?.Invoke((Vector2)m_Camera.ScreenToWorldPoint(_catInputActions.Cat.PointerPosition.ReadValue<Vector2>()));
     }
 }

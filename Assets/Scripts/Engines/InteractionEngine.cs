@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 using TMPro;
 
-public sealed class InteractionEngine : MonoBehaviour
+public sealed class InteractionEngine : CollisionDetector
 {
     [SerializeField] private bool m_DrawGizmos;
     [SerializeField] private KeyCode m_InteractionKey = KeyCode.E;
@@ -37,13 +37,13 @@ public sealed class InteractionEngine : MonoBehaviour
 
     private void SearchForAvailableInteraction()
     {
-        Collider2D detectedCollider = Physics2D.OverlapCircle(m_OverlapCirclePoint.position, m_InteractionRadius, m_InteractionLayer);
+        Collider2D detectedCollider = GetDetectedCollider(m_OverlapCirclePoint.position, m_InteractionRadius, m_InteractionLayer);
 
         if (detectedCollider != null && detectedCollider.TryGetComponent(out _interactable))
         {
             _haveInteraction = true;
             m_InteractionHeader.text = _interactable.GetDescription();
-            m_ProgressBarGO.SetActive(_interactable.InteractionType is Interactable.InteractionTypeEnum.Hold);
+            m_ProgressBarGO.SetActive(_interactable.InteractionType == Interactable.InteractionTypeEnum.Hold);
             return;
         }
         else m_InteractionHeader.text = string.Empty;

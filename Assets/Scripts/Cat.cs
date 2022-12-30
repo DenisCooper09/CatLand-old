@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(AnimationEngine))]
 public sealed class Cat : CatInput
 {
+    public bool IsMoving { get; set; } = true;
+
     [SerializeField] private Camera m_Camera;
 
     private MovementEngine _movementEngine;
@@ -19,7 +21,7 @@ public sealed class Cat : CatInput
 
     private void Update()
     {
-        _movementEngine.MovementInput = GetMovementInput();
+        _movementEngine.MovementInput = IsMoving ? GetMovementInput() : Vector2.zero;
         _animationEngine.PlayAnimation(_movementEngine.MovementInput);
         _animationEngine.RotateToPointer(GetPointerPosition(m_Camera));
     }

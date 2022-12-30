@@ -8,10 +8,10 @@ public abstract class Interactable : MonoBehaviour
     [field: SerializeField]
     public InteractionTypeEnum InteractionType { get; private set; }
 
-    [field: SerializeField, ShowIf(nameof(Enabled))]
+    [field: SerializeField, ShowIf(nameof(IsEnabled))]
     public float InteractionDuration { get; private set; } = 1f;
 
-    private bool Enabled() { return InteractionType == InteractionTypeEnum.Hold; }
+    private bool IsEnabled() { return InteractionType == InteractionTypeEnum.Hold; }
 
     private float _holdTime = 0f;
 

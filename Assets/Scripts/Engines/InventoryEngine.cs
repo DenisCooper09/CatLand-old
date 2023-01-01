@@ -4,13 +4,14 @@ using TMPro;
 
 public sealed class InventoryEngine : MonoBehaviour
 {
+    public Item CurrentItem { get; private set; }
+
+    public bool IsFull { get; private set; }
+
     [SerializeField] private Transform m_DropPoint;
     [SerializeField] private GameObject m_InventoryGO;
     [SerializeField] private TextMeshProUGUI m_ItemNameText;
     [SerializeField] private Image m_ItemIcon;
-
-    private Item _currentItem;
-    private bool _isFull;
 
     private void OnEnable() => Item.OnPickup += Pickup;
 
@@ -20,24 +21,34 @@ public sealed class InventoryEngine : MonoBehaviour
 
     private void Pickup(Item item)
     {
-        if (_isFull)
+        AddItem(item);
+        Destroy(item.ItemObject);
+    }
+
+    public void AddItem(Item item)
+    {
+        if (IsFull)
             return;
 
-        _isFull = true;
-        _currentItem = item;
+        IsFull = true;
+        CurrentItem = item;
         m_ItemNameText.text = item.ItemData.Name;
         m_ItemIcon.sprite = item.ItemData.Icon;
         m_InventoryGO.SetActive(true);
-        Destroy(item.ItemObject);
     }
 
     public void Drop()
     {
-        if (!_isFull)
+        RemoveItem();
+        Instantiate(CurrentItem.ItemData.Object, m_DropPoint.position, Quaternion.identity);
+    }
+
+    public void RemoveItem()
+    {
+        if (!IsFull)
             return;
 
-        _isFull = false;
-        Instantiate(_currentItem.ItemData.Object, m_DropPoint.position, Quaternion.identity);
+        IsFull = false;
         m_InventoryGO.SetActive(false);
     }
 }

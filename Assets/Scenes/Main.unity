@@ -518,8 +518,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412348582}
+  - component: {fileID: 412348586}
+  - component: {fileID: 412348585}
   - component: {fileID: 412348584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cabin Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,6 +566,63 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &412348585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412348581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2e1f4b5d2fe4e4e872e241c87ab2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InteractionType>k__BackingField: 0
+  <InteractionDuration>k__BackingField: 1
+  m_RequireCountOfBerries: 3
+  m_BerriesData: {fileID: 11400000, guid: d3cab085e973d6a4c97c0fe87b181375, type: 2}
+  m_Inventory: {fileID: 450937800}
+  OnGettingRightAmountOfBerries:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!70 &412348586
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412348581}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.35}
+  m_Size: {x: 3, y: 0.7}
+  m_Direction: 1
 --- !u!1 &450937790
 GameObject:
   m_ObjectHideFlags: 0

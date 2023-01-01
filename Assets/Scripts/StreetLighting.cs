@@ -23,6 +23,6 @@ public class StreetLighting : Interactable
 
     public override string GetDescription()
     {
-        return _isOn ? "Turn <color=red>Off</color> Street Lighting" : "Turn <color=green>On</color> Street Lighting";
+        return _isOn ? "Turn <color=red>Off</color>" : "Turn <color=green>On</color>";
     }
 }

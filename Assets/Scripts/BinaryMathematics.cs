@@ -13,6 +13,12 @@ public class BinaryMathematics : MonoBehaviour
 {
     protected sealed class MathematicalExpression
     {
+        public string Number1 { get; private set; }
+        public string Number2 { get; private set; }
+        public string Answer { get; private set; }
+        public char OperationSymbol { get; private set; }
+        public MathOperationType MathOperationType { get; private set; }
+
         public MathematicalExpression(int number1, int number2, MathOperationType mathOperationType)
         {
             Number1 = ConvertToBinary(number1);
@@ -38,12 +44,6 @@ public class BinaryMathematics : MonoBehaviour
 
             MathOperationType = mathOperationType;
         }
-
-        public string Number1 { get; private set; }
-        public string Number2 { get; private set; }
-        public string Answer { get; private set; }
-        public char OperationSymbol { get; private set; }
-        public MathOperationType MathOperationType { get; private set; }
     }
 
     protected static string ConvertToBinary(int number)

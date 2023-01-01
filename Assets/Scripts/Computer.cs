@@ -19,7 +19,18 @@ public sealed class Computer : BinaryMathematics
 
     private const string UnityEvents = "Unity Events";
 
+    [SerializeField, Foldout(UnityEvents)] private Command[] m_Commands;
     [SerializeField, Foldout(UnityEvents)] private UnityEvent OnCorrectAnswer, OnWrongAnswer, OnAllQuestionsCorrectAnswer;
+
+    [Serializable]
+    private sealed class Command
+    {
+        [field: SerializeField] 
+        public string CommandString { get; private set; }
+
+        [field: SerializeField] 
+        public UnityEvent OnCommandCall { get; private set; }
+    }
 
     private const string UI = nameof(UI);
 
@@ -35,7 +46,6 @@ public sealed class Computer : BinaryMathematics
 
     private int _currentMathematicalExpressionNumber;
     private MathematicalExpression[] _mathematicalExpressions;
-    private bool _correct = false;
 
     private void Awake()
     {
@@ -53,13 +63,13 @@ public sealed class Computer : BinaryMathematics
 
     private void HandleInput()
     {
-        if (m_AnswerInputField.text == "/restart")
+        foreach (Command command in m_Commands)
         {
-            m_MathematicalExpressionText.color = Color.green;
-            m_AnswerInputField.text = string.Empty;
-            _mathematicalExpressions = MakeMathematicalExpressions();
-            UpdateMathematicalExpressionUI();
-            return;
+            if (m_AnswerInputField.text == command.CommandString)
+            {
+                command.OnCommandCall?.Invoke();
+                return;
+            }
         }
 
         if (m_AnswerInputField.text == _mathematicalExpressions[_currentMathematicalExpressionNumber].Answer)
@@ -72,7 +82,6 @@ public sealed class Computer : BinaryMathematics
                 _currentMathematicalExpressionNumber = 0;
                 PrintMessage("Correct!", Color.green);
                 m_AnswerInputField.text = string.Empty;
-                _correct = true;
                 return;
             }
 
@@ -89,13 +98,12 @@ public sealed class Computer : BinaryMathematics
         }
     }
 
-    public void MakeNewMathematicalExpressionsOnExit()
+    public void Restart()
     {
-        if (!_correct) return;
+        m_MathematicalExpressionText.color = Color.green;
+        m_AnswerInputField.text = string.Empty;
         _mathematicalExpressions = MakeMathematicalExpressions();
         UpdateMathematicalExpressionUI();
-        m_AnswerInputField.text = string.Empty;
-        _correct = false;
     }
 
     private void PrintMessage(string message, Color color)

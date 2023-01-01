@@ -137,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frame0
+      name: Computer_Frame0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,7 +158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame1
+      name: Computer_Frame1
       rect:
         serializedVersion: 2
         x: 100
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame2
+      name: Computer_Frame2
       rect:
         serializedVersion: 2
         x: 200
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame3
+      name: Computer_Frame3
       rect:
         serializedVersion: 2
         x: 300
@@ -221,7 +221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame4
+      name: Computer_Frame4
       rect:
         serializedVersion: 2
         x: 400
@@ -242,7 +242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame5
+      name: Computer_Frame5
       rect:
         serializedVersion: 2
         x: 500
@@ -263,7 +263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame6
+      name: Computer_Frame6
       rect:
         serializedVersion: 2
         x: 600
@@ -294,13 +294,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Frame2: 7701123341098159701
-      Frame6: -6521417524616397739
-      Frame3: -6421619364738364160
-      Frame0: -4588117973622975583
-      Frame1: 1469523081754540253
-      Frame5: 6712104362577352744
-      Frame4: 3360914596584583636
+      Computer_Frame0: 1469523081754540253
+      Computer_Frame6: -6521417524616397739
+      Computer_Frame3: -6421619364738364160
+      Computer_Frame1: 7701123341098159701
+      Computer_Frame5: 6712104362577352744
+      Computer_Frame4: 3360914596584583636
+      Computer_Frame2: 7701123341098159701
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

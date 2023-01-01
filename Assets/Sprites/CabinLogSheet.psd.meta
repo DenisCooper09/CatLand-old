@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b34a2e0735829644eb5accfa8d67233c
+guid: 2cbd0f23d6faf234985ce9ab81a2a612
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9187075060153142881
-    second: HouseSheet_0
+      213: -390367357759256674
+    second: CabinLogSheet_0
   - first:
-      213: -30547148876213993
-    second: HouseSheet_1
+      213: -4154218553831952563
+    second: CabinLogSheet_1
   - first:
-      213: 4369636282287509209
-    second: HouseSheet_2
+      213: 8562376663900702027
+    second: CabinLogSheet_2
   - first:
-      213: -559875377885537803
-    second: HouseSheet_3
+      213: -9191624111889942972
+    second: CabinLogSheet_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frame0
+      name: CabinLog_Frame0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f91b8b278e3f08080800000000000000
-      internalID: -9187075060153142881
+      spriteID: e970ad4d4f2259af0800000000000000
+      internalID: -390367357759256674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame1
+      name: CabinLog_Frame1
       rect:
         serializedVersion: 2
         x: 64
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 711155aa789739ff0800000000000000
-      internalID: -30547148876213993
+      spriteID: d4f628b3c304956c0800000000000000
+      internalID: -4154218553831952563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame2
+      name: CabinLog_Frame2
       rect:
         serializedVersion: 2
         x: 128
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9dec7632c0114ac30800000000000000
-      internalID: 4369636282287509209
+      spriteID: b4545ecd53ca3d670800000000000000
+      internalID: 8562376663900702027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame3
+      name: CabinLog_Frame3
       rect:
         serializedVersion: 2
         x: 192
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f915a66f4cea38f0800000000000000
-      internalID: -559875377885537803
+      spriteID: 44672edc19ac07080800000000000000
+      internalID: -9191624111889942972
       vertices: []
       indices: 
       edges: []
@@ -193,7 +193,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b6b77c2902c49414e9c25d659a851612
+    spriteID: eb3e8627d9562624e98de5c7fa33016f
     internalID: 0
     vertices: []
     indices: 
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Frame2: 4369636282287509209
-      Frame3: -559875377885537803
-      Frame0: -9187075060153142881
-      Frame1: -30547148876213993
+      CabinLog_Frame1: -4154218553831952563
+      CabinLog_Frame0: -390367357759256674
+      CabinLog_Frame2: 8562376663900702027
+      CabinLog_Frame3: -9191624111889942972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

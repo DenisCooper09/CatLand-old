@@ -1066,7 +1066,7 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 53
-        width: 80
+        width: 32
         height: 43
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1082,7 +1082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KitchenFacade_1
+      name: KitchenFacade_4
       rect:
         serializedVersion: 2
         x: 176
@@ -1291,6 +1291,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: KitchenFacade_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 53
+        width: 16
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb9f322a9ab653448ff435732f66db1
+      internalID: 35814885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KitchenFacade_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 53
+        width: 16
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21f81a8a1c8c484a8f502ab6c6618b5
+      internalID: -1316095592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KitchenFacade_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 53
+        width: 16
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17e8c63c6af91747bb3454df4c85216
+      internalID: -2088280593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1312,6 +1375,7 @@ TextureImporter:
       Sofa_Back: 1005609667
       OldMusicPlayer: -225376347
       SmallTable_0: -2544577
+      KitchenFacade_2: -1316095592
       Nightstand_Front_1: 1420434016
       KitchenFacade_0: 1365150111
       Kitchenware: -1737394767
@@ -1325,8 +1389,10 @@ TextureImporter:
       FloorClock: -275603058
       Chair_Front_1: 775800113
       Mirror: 1753937647
-      KitchenFacade_1: 1912451084
+      KitchenFacade_1: 35814885
       BigBookcase_Front_1: 931847221
+      KitchenFacade_3: -2088280593
+      KitchenFacade_4: 1912451084
       Fireplace: 1724269593
       Sofa_Left: -1945732325
       BigBookcase_Front_0: -1448134177

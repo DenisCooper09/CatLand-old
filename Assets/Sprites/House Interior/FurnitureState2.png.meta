@@ -578,12 +578,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBookcase_Front_1
+      name: BigBookcase_Front_1_0
       rect:
         serializedVersion: 2
         x: 97
         y: 177
-        width: 46
+        width: 15
         height: 45
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -837,8 +837,8 @@ TextureImporter:
         y: 32
         width: 27
         height: 60
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1066,7 +1066,7 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 53
-        width: 80
+        width: 32
         height: 43
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1082,7 +1082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KitchenFacade_1
+      name: KitchenFacade_4
       rect:
         serializedVersion: 2
         x: 176
@@ -1291,6 +1291,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: KitchenFacade_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 53
+        width: 16
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cf3b13842d08c4faa0805c3536e4de
+      internalID: 221061248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KitchenFacade_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 53
+        width: 16
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4308db273506b914abe990e4744ac4bf
+      internalID: 1853188922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KitchenFacade_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 53
+        width: 16
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6753bdbce2455144a02b1cce02ef5d1
+      internalID: 1924079466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBookcase_Front_1_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 177
+        width: 16
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ce6a5c666099d469566e8c60e5a9e9
+      internalID: -1452110179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBookcase_Front_1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 177
+        width: 15
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858466a838e5d1d4fa810bb612c85aed
+      internalID: -1842804111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1307,11 +1412,13 @@ TextureImporter:
       Armchair_Front: -123205732
       Nightstand_Front_0: 2492210224692145768
       Washbasin: -675324212
-      BigCarpet_Left-Right: 1432332110
+      BigBookcase_Front_1_0: 1402341952
       BigBookcase_Left_0: 1686069849
       Sofa_Back: 613045915
+      BigCarpet_Left-Right: 1432332110
       OldMusicPlayer: -643302618
       SmallTable_0: 860090716
+      KitchenFacade_2: 1853188922
       Nightstand_Front_1: -1110765361
       KitchenFacade_0: 1588476512
       Kitchenware: 2007616686
@@ -1322,12 +1429,15 @@ TextureImporter:
       FloorLamp: -1833468747
       BigTable_Left: 1049084930
       Shelf: -495308363
+      BigBookcase_Front_1_1: -1452110179
       Chair_Front_1: 29391993
       FloorClock: 279566956
       Mirror: -582809967
-      KitchenFacade_1: 1062892733
-      BigBookcase_Front_1: 1402341952
+      KitchenFacade_1: 221061248
+      KitchenFacade_3: 1924079466
+      KitchenFacade_4: 1062892733
       Fireplace: 1959316559
+      BigBookcase_Front_1_2: -1842804111
       Sofa_Left: -614005905
       BigBookcase_Front_0: -541011948
       Fridge: 189680655

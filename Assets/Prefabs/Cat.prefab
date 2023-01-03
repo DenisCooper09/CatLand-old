@@ -187,7 +187,7 @@ Transform:
   - {fileID: 1970473510971563615}
   - {fileID: 2861490589818375735}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3491439770485424285
 Rigidbody2D:
@@ -226,7 +226,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8c3235ce287b9834ab4d2e4cb335bea6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

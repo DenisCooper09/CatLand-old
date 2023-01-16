@@ -27,7 +27,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -101,43 +101,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bush_WITHOUT_Berries
+      name: BushSheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 8
-        width: 33
-        height: 27
+        x: 0
+        y: 0
+        width: 42
+        height: 42
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ccf69650cf54c8ed0800000000000000
-      internalID: -2410474751825186868
+      spriteID: ed244956c4d7d78448dc95ad4f727801
+      internalID: 44104634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bush_WITH_Berries
+      name: BushSheet_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 8
-        width: 33
-        height: 27
+        x: 42
+        y: 0
+        width: 42
+        height: 42
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e9d404a46aa58060800000000000000
-      internalID: 6955152548768831977
+      spriteID: 34655ff757b891043b2b4b21e7f0e439
+      internalID: 618905083
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bush_WITH_Berries: 6955152548768831977
-      Bush_WITHOUT_Berries: -2410474751825186868
+      BushSheet_1: 618905083
+      BushSheet_0: 44104634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

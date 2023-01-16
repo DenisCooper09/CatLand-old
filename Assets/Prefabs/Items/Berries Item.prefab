@@ -68,8 +68,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.115}
-  m_Size: {x: 0.4, y: 0.15}
+  m_Offset: {x: 0, y: 0.16}
+  m_Size: {x: 0.43, y: 0.2}
   m_Direction: 1
 --- !u!114 &2159694647204108673
 MonoBehaviour:
@@ -83,8 +83,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f4eba3627d1b8947b79a4d88655b3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpriteRenderer: {fileID: 2404175424920102413}
+  m_DefaultMaterial: {fileID: 2100000, guid: cdfd862497904fb4f9e8bf08fc6833a5, type: 2}
+  m_OutlineMaterial: {fileID: 2100000, guid: aebeb350dcd484a4ab9b0bf60bac2837, type: 2}
   <InteractionType>k__BackingField: 0
   <InteractionDuration>k__BackingField: 1
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
   <ItemData>k__BackingField: {fileID: 11400000, guid: d3cab085e973d6a4c97c0fe87b181375, type: 2}
 --- !u!212 &2404175424920102413
 SpriteRenderer:

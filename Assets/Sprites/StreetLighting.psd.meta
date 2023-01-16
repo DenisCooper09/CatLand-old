@@ -63,7 +63,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -137,53 +137,32 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StreetLighting_0_OFF
+      name: StreetLighting_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 73
-        width: 24
-        height: 61
+        y: 74
+        width: 26
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b12676548f93ed10800000000000000
-      internalID: 2153740437548310965
+      spriteID: 6de269e9162005748ad3c18eee8bc59c
+      internalID: -56810831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_1_OFF
+      name: StreetLighting_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 74
-        width: 24
-        height: 58
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5c1c830dd1ba5330800000000000000
-      internalID: 3700465606643686494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StreetLighting_2_OFF
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 74
+        y: 75
         width: 26
         height: 60
       alignment: 7
@@ -191,146 +170,146 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e31e7c33a00d0aaf0800000000000000
-      internalID: -387080825716874946
+      spriteID: 70e9e25db4c914444b973e4534fd6df5
+      internalID: -923523881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_3_OFF
+      name: StreetLighting_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 75
+        width: 28
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbda6193ef109a340bf0f66c35f03869
+      internalID: 248902753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLighting_3
       rect:
         serializedVersion: 2
         x: 109
-        y: 74
-        width: 14
-        height: 60
+        y: 75
+        width: 16
+        height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e1b561e44bbb9a5a0800000000000000
-      internalID: -6509465403308745954
+      spriteID: dfd78eab2cce49348afdea8ad26d729b
+      internalID: -1517692122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_4_OFF
+      name: StreetLighting_4
       rect:
         serializedVersion: 2
         x: 142
-        y: 74
-        width: 12
-        height: 59
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7563031f027b99520800000000000000
-      internalID: 2709398002953369175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StreetLighting_5_OFF
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 74
-        width: 20
-        height: 56
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0186fe2edb831c4f0800000000000000
-      internalID: -810304069742663664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StreetLighting_6_OFF
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 74
-        width: 22
-        height: 59
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e638bb1a58b74bbc0800000000000000
-      internalID: -3768251174327975058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StreetLighting_0_ON
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
+        y: 75
+        width: 14
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 73401d3320d2366f0800000000000000
-      internalID: -692660430202403785
+      spriteID: d120c57d2ebea4f48b7de382833310e5
+      internalID: 2121708419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_1_ON
+      name: StreetLighting_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 24
+        x: 170
+        y: 75
+        width: 22
         height: 58
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b87ef25dbafb1860800000000000000
-      internalID: 7501865295363864756
+      spriteID: 1c369bb9931ebd447a554b35b7242176
+      internalID: 987584668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_2_ON
+      name: StreetLighting_6
       rect:
         serializedVersion: 2
-        x: 67
-        y: 0
+        x: 201
+        y: 74
+        width: 24
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c41eb7e3168b841b998053f9701a39
+      internalID: -137745422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLighting_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 26
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa673e9fca1c8784e94497b8548fc076
+      internalID: 1116561229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLighting_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
         width: 26
         height: 60
       alignment: 7
@@ -338,94 +317,115 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 83e589ae521ec0ca0800000000000000
-      internalID: -6049212646499525064
+      spriteID: b90e5960899af094cb45a4e87540308c
+      internalID: -1487118036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_3_ON
+      name: StreetLighting_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 28
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065ae25638b411845a9d7e68250bfbf6
+      internalID: 70636264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLighting_10
       rect:
         serializedVersion: 2
         x: 109
-        y: 0
-        width: 14
-        height: 60
+        y: 1
+        width: 16
+        height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0294154b2d7b77bf0800000000000000
-      internalID: -326590332364830432
+      spriteID: 6172a31b6bc35c4479b45cbea0a01d4a
+      internalID: 1810819097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_4_ON
+      name: StreetLighting_11
       rect:
         serializedVersion: 2
         x: 142
-        y: 0
-        width: 12
-        height: 59
+        y: 1
+        width: 14
+        height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9ba920240904a8510800000000000000
-      internalID: 1552124009909492409
+      spriteID: c38618711558c8340807f3984c59bfc0
+      internalID: 476105505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_5_ON
+      name: StreetLighting_12
       rect:
         serializedVersion: 2
         x: 170
-        y: 0
-        width: 20
-        height: 56
+        y: 1
+        width: 22
+        height: 58
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02159348a792eb730800000000000000
-      internalID: 4016693523842158880
+      spriteID: 13a4c2f280ddc684cadcfa6b97df9766
+      internalID: -48340160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StreetLighting_6_ON
+      name: StreetLighting_13
       rect:
         serializedVersion: 2
         x: 201
-        y: 0
-        width: 22
-        height: 59
+        y: 1
+        width: 24
+        height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f6ca13d4a0fd8fd10800000000000000
-      internalID: 2159721256661920879
+      spriteID: f1328825f8e1d664da49943339fd9f43
+      internalID: -2064690850
       vertices: []
       indices: 
       edges: []
@@ -441,20 +441,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      StreetLighting_0_ON: -692660430202403785
-      StreetLighting_4_OFF: 2709398002953369175
-      StreetLighting_4_ON: 1552124009909492409
-      StreetLighting_1_OFF: 3700465606643686494
-      StreetLighting_0_OFF: 2153740437548310965
-      StreetLighting_5_OFF: -810304069742663664
-      StreetLighting_2_ON: -6049212646499525064
-      StreetLighting_2_OFF: -387080825716874946
-      StreetLighting_3_ON: -326590332364830432
-      StreetLighting_6_ON: 2159721256661920879
-      StreetLighting_1_ON: 7501865295363864756
-      StreetLighting_5_ON: 4016693523842158880
-      StreetLighting_3_OFF: -6509465403308745954
-      StreetLighting_6_OFF: -3768251174327975058
+      StreetLighting_5: 987584668
+      StreetLighting_13: -2064690850
+      StreetLighting_3: -1517692122
+      StreetLighting_2: 248902753
+      StreetLighting_7: 1116561229
+      StreetLighting_1: -923523881
+      StreetLighting_4: 2121708419
+      StreetLighting_6: -137745422
+      StreetLighting_0: -56810831
+      StreetLighting_10: 1810819097
+      StreetLighting_11: 476105505
+      StreetLighting_12: -48340160
+      StreetLighting_9: 70636264
+      StreetLighting_8: -1487118036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
